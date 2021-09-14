@@ -57,6 +57,6 @@ declare module 'leaflet' {
     }
   }
 }
-export type Proj4GeoJSONFeature = geojson.Feature<geojson.GeometryObject> & {
+export type Proj4GeoJSONFeature<G extends Geometry | null = Geometry> = geojson.Feature<G> & {
   crs?: { type: string; properties: { name: string } } | undefined
 };
